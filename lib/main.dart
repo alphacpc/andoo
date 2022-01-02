@@ -6,7 +6,9 @@ void main() {
   runApp(
     MaterialApp(
       title: 'Passing Data',
-      home: TodosScreen(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(primaryColor: Colors.deepOrange),
+      home: HomeScreen(
         leaders: [
           Leader(
               "Cheikh Anta",
