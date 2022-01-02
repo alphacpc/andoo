@@ -1,4 +1,6 @@
+import 'package:andoo/models/LeaderType.dart';
 import 'package:flutter/material.dart';
+import 'package:andoo/models/LeaderType.dart';
 
 class Todo {
   final String title;
@@ -25,9 +27,52 @@ void main() {
 }
 
 class TodosScreen extends StatelessWidget {
-  const TodosScreen({Key? key, required this.todos}) : super(key: key);
+  TodosScreen({Key? key, required this.todos}) : super(key: key);
 
   final List<Todo> todos;
+
+  final List<Leader> leaders = [
+    Leader(
+        "Cheikh Anta",
+        "DOP",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+        "assets/anta.jpg"),
+    Leader(
+        "Thomas",
+        "Sankara",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+        "assets/thomas.jpeg"),
+    Leader(
+        "Kwame",
+        "Nkrumah",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+        "assets/knkrumah.jpg"),
+    Leader(
+        "Patrice Émery",
+        "Lumumba",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+        "assets/patrice.jpeg"),
+    Leader(
+        "Wangari Maathai",
+        "Maathai",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+        "assets/matti.jpg"),
+    Leader(
+        "Aliko",
+        "Dangote",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+        "assets/aliko.jpg"),
+    Leader(
+        "Rose",
+        "Dieng-Kuntz",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+        "assets/rose.jpeg"),
+    Leader(
+        "Mouammar",
+        "Kadhafi",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+        "assets/kadhafi.jpg"),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -36,10 +81,10 @@ class TodosScreen extends StatelessWidget {
         title: const Text('Todos'),
       ),
       body: ListView.builder(
-        itemCount: todos.length,
+        itemCount: leaders.length,
         itemBuilder: (context, index) {
           return ListTile(
-            title: Text(todos[index].title),
+            title: Text(leaders[index].leaderLname),
             // When a user taps the ListTile, navigate to the DetailScreen.
             // Notice that you're not only creating a DetailScreen, you're
             // also passing the current todo through to it.
@@ -47,7 +92,7 @@ class TodosScreen extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => DetailScreen(todo: todos[index]),
+                  builder: (context) => DetailScreen(leader: leaders[index]),
                 ),
               );
             },
@@ -60,21 +105,28 @@ class TodosScreen extends StatelessWidget {
 
 class DetailScreen extends StatelessWidget {
   // In the constructor, require a Todo.
-  const DetailScreen({Key? key, required this.todo}) : super(key: key);
+  const DetailScreen({Key? key, required this.leader}) : super(key: key);
 
   // Declare a field that holds the Todo.
-  final Todo todo;
+  final Leader leader;
 
   @override
   Widget build(BuildContext context) {
     // Use the Todo to create the UI.
     return Scaffold(
       appBar: AppBar(
-        title: Text(todo.title),
+        title: Text(leader.leaderFname),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
-        child: Text(todo.description),
+        child: Column(
+          children: [
+            Text(leader.leaderLname),
+            Text(leader.leaderFname),
+            Text(leader.leaderRole),
+            Text(leader.leaderCountry),
+          ],
+        ),
       ),
     );
   }
