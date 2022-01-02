@@ -107,7 +107,9 @@ class HomeScreen extends StatelessWidget {
                                           CrossAxisAlignment.start,
                                       children: [
                                         Text(
-                                          leaders[index].leaderFname,
+                                          leaders[index].leaderFname +
+                                              ' ' +
+                                              leaders[index].leaderLname,
                                           style: TextStyle(
                                               fontWeight: FontWeight.bold),
                                         ),
