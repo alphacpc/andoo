@@ -21,6 +21,8 @@ environment:
   sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
+  getwidget: ^2.0.4
+  flutter_slidable: ^1.1.0
   flutter:
     sdk: flutter
 
@@ -45,9 +47,19 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+  assets:
+    - assets/photo.jpg
+    - assets/header.jpg
+    - assets/anta.jpg
+    - assets/kadhafi.jpg
+    - assets/aliko.jpg
+    - assets/knkrumah.jpg
+    - assets/matti.jpg
+    - assets/thomas.jpeg
+    - assets/rose.jpeg
+    - assets/patrice.jpeg
+    - assets/africa1.jpg
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
