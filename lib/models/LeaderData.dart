@@ -1,6 +1,6 @@
 import 'package:andoo/models/LeaderType.dart';
 
-final List<Leader> Leaders = [
+List<Leader> Leaders = [
   Leader(
       "Cheikh Anta",
       "DOP",
