@@ -8,6 +8,7 @@ class Leader {
   String leaderCountry  = '';
   String leaderPicture = '';
   String leaderMessage = '';
+  String leaderBio = '';
   String? leaderBook;
   bool leaderIsDies = false;
 
@@ -20,6 +21,7 @@ class Leader {
     this.leaderPicture,
     this.leaderMessage,
     this.leaderIsDies,
+    this.leaderBio,
     // this.leaderDie
     );
 }

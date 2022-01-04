@@ -36,7 +36,8 @@ class DetailScreen extends StatelessWidget {
           delegate: SliverChildListDelegate([
             Container(
               width: fullWidthScreen,
-              padding: EdgeInsets.symmetric(vertical: 10.0,horizontal: 20.0),
+              // height: fullHeightScreen,
+              padding: EdgeInsets.symmetric(vertical: 20.0,horizontal: 20.0),
               child: Column(
                 children: [
                   showRowElement(Icons.supervised_user_circle_outlined, "Nom de famille", leader.leaderLname),
@@ -45,7 +46,7 @@ class DetailScreen extends StatelessWidget {
                   showRowElement(Icons.home_outlined,"Lieu de Naissance", leader.leaderBornFrom),
                   showRowElement(Icons.flag_outlined,"Nationalité", leader.leaderCountry),
                   showRowElement(Icons.business_center_outlined,"Profession", leader.leaderRole),
-                  showRowElementWithoutIcon("Biographie", leader.leaderMessage),
+                  showRowElementWithoutIcon("Biographie", leader.leaderBio),
                 ],
             )),
           ]),
