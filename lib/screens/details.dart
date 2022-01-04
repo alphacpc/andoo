@@ -53,7 +53,8 @@ class DetailScreen extends StatelessWidget {
                       ),
                       Expanded(
                         flex: 2,
-                        child: Text(leader.leaderLname)
+                        child: Text(leader.leaderLname, style: TextStyle(fontFamily: 'Montserrat',
+                        fontWeight: FontWeight.w500),)
                       ),
                       
                     ],

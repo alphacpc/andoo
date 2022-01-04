@@ -58,7 +58,7 @@ class HomeScreen extends StatelessWidget {
                         colorFilter: new ColorFilter.mode(
                             Colors.deepOrange.withOpacity(0.5),
                             BlendMode.dstATop),
-                        image: new AssetImage("assets/africa1.jpg"),
+                        image: new AssetImage("assets/images/africa1.jpg"),
                         fit: BoxFit.cover)),
               ),
             ),
@@ -68,10 +68,10 @@ class HomeScreen extends StatelessWidget {
             Container(
               margin: EdgeInsets.fromLTRB(10, 20, 0, 0),
               child: Text(
-                'Une generation de leaders africains',
+                'Une génération de leaders africains',
                 style: TextStyle(
                   fontFamily: 'Cabin',
-                  fontSize: 45,
+                  fontSize: 40,
                   fontWeight: FontWeight.bold,
                 ),
               ),

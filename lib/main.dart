@@ -17,7 +17,7 @@ void main() {
             "Thieytou",
             "historien, anthropologue, chimiste",
             "Senegal",
-            "assets/anta.jpg",
+            "assets/images/anta.jpg",
             "Lorem ipsum inst ...",
             true
           ),
@@ -30,7 +30,7 @@ void main() {
               "Yako, Haute-Volta",
               "homme d'État anti-impérialiste, révolutionnaire, socialiste, panafricaniste et tiers-mondiste",
               "Burkina Faso",
-              "assets/thomas.jpeg",
+              "assets/images/thomas.jpeg",
               "Lorem ipsum inst ...",
               true
               ),
@@ -42,7 +42,7 @@ void main() {
               "Nkroful",
               "homme d'État indépendantiste et panafricaniste",
               "Ghana",
-              "assets/knkrumah.jpg",
+              "assets/images/knkrumah.jpg",
               "Lorem ipsum dolor elit...",
               true
               ),
@@ -55,7 +55,7 @@ void main() {
               "Onalua, Kasaï-Oriental (Congo belge)",
               "premier Premier ministre de la République démocratique du Congo",
               "RDC",
-              "assets/patrice.jpeg",
+              "assets/images/patrice.jpeg",
               "Lorem ipsum dolor elit...",
               true
               ),
@@ -68,7 +68,7 @@ void main() {
               "Ihithe (colonie du Kenya)",
               " biologiste, professeure d'anatomie en médecine vétérinaire et militante politique et écologiste",
               "Kenya",
-              "assets/matti.jpg",
+              "assets/images/matti.jpg",
               "Lorem ipsum dolor elit...",
               true
               ),
@@ -81,7 +81,7 @@ void main() {
               "Kano, Nord du Nigeria",
               "Homme d'affaires nigérian",
               "Nigéria",
-              "assets/aliko.jpg",
+              "assets/images/aliko.jpg",
               "Lorem ipsum dolor elit...",
               false,
               ),
@@ -94,7 +94,7 @@ void main() {
               "Dakar",
               "Spécialiste en intelligence artificielle",
               "Sénégal",
-              "assets/rose.jpeg",
+              "assets/images/rose.jpeg",
               "Lorem ipsum dolor elit...",
               true,
               ),
@@ -108,7 +108,7 @@ void main() {
               "Qasr Abou Hadi (Libye italienne)",
               "Militaire et homme d'État libyen.",
               "Lybie",
-              "assets/kadhafi.jpg",
+              "assets/images/kadhafi.jpg",
               "Lorem ipsum dolor elit...",
               true
               ),
