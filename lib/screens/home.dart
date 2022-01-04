@@ -26,9 +26,19 @@ class HomeScreen extends StatelessWidget {
             children: [
               const DrawerHeader(
                   decoration: BoxDecoration(color: Colors.deepOrange),
-                  child: Text('Bienvenue sur andoo')),
+                  child: Center(
+                    child: Text('Bienvenue sur andoo'),
+                  )),
               ListTile(
-                title: const Text('Proverbe'),
+                title: Container(
+                  child: Row(
+                    children: [
+                      Icon(Icons.person_pin),
+                      SizedBox(width: 20,),
+                      Text("Connexion")
+                    ],
+                  ),
+                ),
                 onTap: () => Navigator.pop(context),
               ),
               ListTile(
@@ -56,7 +66,7 @@ class HomeScreen extends StatelessWidget {
                 decoration: BoxDecoration(
                     image: DecorationImage(
                         colorFilter: new ColorFilter.mode(
-                            Colors.deepOrange.withOpacity(0.5),
+                            Colors.deepOrange.withOpacity(0.6),
                             BlendMode.dstATop),
                         image: new AssetImage("assets/images/africa1.jpg"),
                         fit: BoxFit.cover)),

@@ -7,7 +7,7 @@ void main() {
     MaterialApp(
       title: 'Passing Data',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(primaryColor: Colors.deepOrange[400]),
+      theme: ThemeData(primarySwatch: Colors.deepOrange),
       home: HomeScreen(
         leaders: [
           Leader( 

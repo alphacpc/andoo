@@ -26,7 +26,7 @@ class DetailScreen extends StatelessWidget {
               decoration: BoxDecoration(
                   image: DecorationImage(
                       colorFilter: new ColorFilter.mode(
-                          Colors.black.withOpacity(0.5), BlendMode.dstATop),
+                          Colors.deepOrange, BlendMode.dstATop),
                       image: new AssetImage(leader.leaderPicture),
                       fit: BoxFit.cover)),
             ),
