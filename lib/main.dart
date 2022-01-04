@@ -10,46 +10,108 @@ void main() {
       theme: ThemeData(primaryColor: Colors.deepOrange),
       home: HomeScreen(
         leaders: [
-          Leader(
-              "Cheikh Anta",
-              "DOP",
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-              "assets/anta.jpg"),
+          Leader( 
+            "Cheikh Anta",
+            "DIOP",
+            "29 décembre 1923",
+            "Thieytou",
+            "historien, anthropologue, chimiste",
+            "Senegal",
+            "assets/anta.jpg",
+            "Lorem ipsum inst ...",
+            true
+          ),
+
+
           Leader(
               "Thomas",
               "Sankara",
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-              "assets/thomas.jpeg"),
+              "21 décembre 1949",
+              "Yako, Haute-Volta",
+              "homme d'État anti-impérialiste, révolutionnaire, socialiste, panafricaniste et tiers-mondiste",
+              "Burkina Faso",
+              "assets/thomas.jpeg",
+              "Lorem ipsum inst ...",
+              true
+              ),
+              
           Leader(
               "Kwame",
               "Nkrumah",
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-              "assets/knkrumah.jpg"),
+              "21 septembre 1909",
+              "Nkroful",
+              "homme d'État indépendantiste et panafricaniste",
+              "Ghana",
+              "assets/knkrumah.jpg",
+              "Lorem ipsum dolor elit...",
+              true
+              ),
+
+
           Leader(
               "Patrice Émery",
               "Lumumba",
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-              "assets/patrice.jpeg"),
+              "2 juillet 1925",
+              "Onalua, Kasaï-Oriental (Congo belge)",
+              "premier Premier ministre de la République démocratique du Congo",
+              "RDC",
+              "assets/patrice.jpeg",
+              "Lorem ipsum dolor elit...",
+              true
+              ),
+
+
           Leader(
               "Wangari Maathai",
               "Maathai",
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-              "assets/matti.jpg"),
+              "1er avril 1940",
+              "Ihithe (colonie du Kenya)",
+              " biologiste, professeure d'anatomie en médecine vétérinaire et militante politique et écologiste",
+              "Kenya",
+              "assets/matti.jpg",
+              "Lorem ipsum dolor elit...",
+              true
+              ),
+
+
           Leader(
               "Aliko",
               "Dangote",
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-              "assets/aliko.jpg"),
+              "10 avril 1957 ",
+              "Kano, Nord du Nigeria",
+              "Homme d'affaires nigérian",
+              "Nigéria",
+              "assets/aliko.jpg",
+              "Lorem ipsum dolor elit...",
+              false,
+              ),
+
+
           Leader(
               "Rose",
               "Dieng-Kuntz",
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-              "assets/rose.jpeg"),
+              "27 mars 1956",
+              "Dakar",
+              "Spécialiste en intelligence artificielle",
+              "Sénégal",
+              "assets/rose.jpeg",
+              "Lorem ipsum dolor elit...",
+              true,
+              ),
+
+
+
           Leader(
               "Mouammar",
               "Kadhafi",
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-              "assets/kadhafi.jpg"),
+              "vers 1942",
+              "Qasr Abou Hadi (Libye italienne)",
+              "Militaire et homme d'État libyen.",
+              "Lybie",
+              "assets/kadhafi.jpg",
+              "Lorem ipsum dolor elit...",
+              true
+              ),
         ],
       ),
     ),

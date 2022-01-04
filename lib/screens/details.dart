@@ -23,7 +23,7 @@ class DetailScreen extends StatelessWidget {
           pinned: true,
           flexibleSpace: FlexibleSpaceBar(
             centerTitle: true,
-            title: Text('Details [ ' + leader.leaderFname + ' ]'),
+            title: Text(leader.leaderFname + ' ' +leader.leaderLname),
             background: Container(
               decoration: BoxDecoration(
                   image: DecorationImage(
@@ -40,13 +40,22 @@ class DetailScreen extends StatelessWidget {
                 child: Column(
               children: [
                 Container(
-                  height: fullHeightScreen,
+                  // height: fullHeightScreen,
                   width: fullWidthScreen,
-                  child: Column(
+                  padding: EdgeInsets.symmetric(vertical: 10.0,horizontal: 20.0),
+                  child: Row(
                     children: [
-                      Text(leader.leaderLname),
-                      Text(leader.leaderFname),
-                      Text(leader.leaderMessage),
+                      Expanded(
+                        flex: 1,
+                        child: Text("Nom de famille :", style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),)
+                      ),
+                      Expanded(
+                        flex: 2,
+                        child: Text(leader.leaderLname)
+                      ),
+                      
                     ],
                   ),
                 )

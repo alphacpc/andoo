@@ -1,15 +1,27 @@
 class Leader {
   String leaderFname = '';
   String leaderLname = '';
-  String? leaderBorn;
-  String? leaderDie;
-  String? leaderRole;
-  String? leaderCountry;
+  String leaderBornDate = '';
+  String leaderBornFrom  = '';
+  String leaderDie  = '';
+  String leaderRole  = '';
+  String leaderCountry  = '';
   String leaderPicture = '';
   String leaderMessage = '';
   String? leaderBook;
   bool leaderIsDies = false;
 
-  Leader(this.leaderFname, this.leaderLname, this.leaderMessage,
-      this.leaderPicture);
+  Leader(this.leaderFname, 
+    this.leaderLname,
+    this.leaderBornDate,
+    this.leaderBornFrom,
+    this.leaderRole,
+    this.leaderCountry,
+    this.leaderPicture,
+    this.leaderMessage,
+    this.leaderIsDies,
+    // this.leaderDie
+    );
 }
+
+//Distinction

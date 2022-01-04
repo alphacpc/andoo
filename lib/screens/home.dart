@@ -3,9 +3,9 @@ import 'package:andoo/models/LeaderType.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 
-import 'package:getwidget/components/avatar/gf_avatar.dart';
-import 'package:getwidget/components/list_tile/gf_list_tile.dart';
-import 'package:getwidget/shape/gf_avatar_shape.dart';
+// import 'package:getwidget/components/avatar/gf_avatar.dart';
+// import 'package:getwidget/components/list_tile/gf_list_tile.dart';
+// import 'package:getwidget/shape/gf_avatar_shape.dart';
 
 class HomeScreen extends StatelessWidget {
   HomeScreen({Key? key, required this.leaders}) : super(key: key);
@@ -81,7 +81,7 @@ class HomeScreen extends StatelessWidget {
                 children: [
                   Container(
                     width: fullWidthScreen,
-                    height: fullheightScreen,
+                    height: fullheightScreen + 80,
                     child: ListView.builder(
                       physics: NeverScrollableScrollPhysics(),
                       itemCount: leaders.length,
