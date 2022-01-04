@@ -70,6 +70,8 @@ flutter:
         - asset: assets/fonts/Montserrat/Montserrat-Thin.ttf
         - asset: assets/fonts/Montserrat/Montserrat-Medium.ttf
         - asset: assets/fonts/Montserrat/Montserrat-Bold.ttf
+          weight: 700
+
           # style: italic
 
     - family: MavenPro

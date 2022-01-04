@@ -162,5 +162,5 @@ class HomeScreen extends StatelessWidget {
 }
 
 void doNothing(BuildContext context) {
-  print('Hello word');
+  print('I want to delete');
 }

@@ -7,7 +7,7 @@ void main() {
     MaterialApp(
       title: 'Passing Data',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(primaryColor: Colors.deepOrange),
+      theme: ThemeData(primaryColor: Colors.deepOrange[400]),
       home: HomeScreen(
         leaders: [
           Leader( 
@@ -16,7 +16,7 @@ void main() {
             "29 décembre 1923",
             "Thieytou",
             "historien, anthropologue, chimiste",
-            "Senegal",
+            "Sénégalais",
             "assets/images/anta.jpg",
             "Lorem ipsum inst ...",
             true
@@ -29,7 +29,7 @@ void main() {
               "21 décembre 1949",
               "Yako, Haute-Volta",
               "homme d'État anti-impérialiste, révolutionnaire, socialiste, panafricaniste et tiers-mondiste",
-              "Burkina Faso",
+              "Burkinabais",
               "assets/images/thomas.jpeg",
               "Lorem ipsum inst ...",
               true
@@ -93,7 +93,7 @@ void main() {
               "27 mars 1956",
               "Dakar",
               "Spécialiste en intelligence artificielle",
-              "Sénégal",
+              "Sénégalaise",
               "assets/images/rose.jpeg",
               "Lorem ipsum dolor elit...",
               true,
@@ -107,7 +107,7 @@ void main() {
               "vers 1942",
               "Qasr Abou Hadi (Libye italienne)",
               "Militaire et homme d'État libyen.",
-              "Lybie",
+              "Lybien",
               "assets/images/kadhafi.jpg",
               "Lorem ipsum dolor elit...",
               true

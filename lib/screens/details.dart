@@ -39,12 +39,13 @@ class DetailScreen extends StatelessWidget {
               padding: EdgeInsets.symmetric(vertical: 10.0,horizontal: 20.0),
               child: Column(
                 children: [
-                  showRowElement(Icons.person_outline_rounded, "Nom de famille", leader.leaderLname),
+                  showRowElement(Icons.supervised_user_circle_outlined, "Nom de famille", leader.leaderLname),
                   showRowElement(Icons.person_outline_rounded, "Prénom", leader.leaderFname),
                   showRowElement(Icons.date_range,"Date de Naissance", leader.leaderBornDate),
                   showRowElement(Icons.home_outlined,"Lieu de Naissance", leader.leaderBornFrom),
                   showRowElement(Icons.flag_outlined,"Nationalité", leader.leaderCountry),
-                  showRowElementWithoutIcon( "Profession", leader.leaderRole),
+                  showRowElement(Icons.business_center_outlined,"Profession", leader.leaderRole),
+                  showRowElementWithoutIcon("Biographie", leader.leaderMessage),
                 ],
             )),
           ]),
@@ -57,32 +58,58 @@ class DetailScreen extends StatelessWidget {
 
 showRowElement(nameIcon, nameLabel, valueLeader) {
   return Row(
+    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+    crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Container(
+        Expanded(child: Container(
+          padding: EdgeInsets.symmetric(vertical: 6),
           child: Row(
             children: [
-              Icon(nameIcon),
-              Text("$nameLabel : ")
+              Icon(nameIcon,color: Colors.deepOrange, size: 20,),
+              SizedBox(width: 10,),
+              Text("$nameLabel ", style: TextStyle(
+                fontFamily: "Montserrat",
+                fontSize: 14
+              ),)
             ],
           ),
         ),
-        Text(valueLeader)
+        flex: 1),
+        Expanded(child: Text(valueLeader, 
+          style: TextStyle(
+            fontFamily: "Montserrat",
+            fontSize: 16,
+            fontWeight: FontWeight.w500,
+            letterSpacing: .2 
+          )), flex: 1)
       ],
   );
 }
 
 
-showRowElementWithoutIcon( nameLabel, valueLeader) {
-  return Row(
+showRowElementWithoutIcon(nameLabel, valueLeader) {
+  return Container(
+    padding: EdgeInsets.only(top: 30),
+    child: Column(
       children: [
-        Container(
-          child: Row(
-            children: [
-              Text("$nameLabel : ")
-            ],
-          ),
+        Text("$nameLabel",
+          style: TextStyle(
+            fontFamily: 'Montserrat',
+            fontWeight: FontWeight.bold,
+            fontSize: 20,
+          )
         ),
-        Text(valueLeader)
+        Container(
+          padding: EdgeInsets.only(top: 10),
+          child: Text(valueLeader,
+            style: TextStyle(
+              fontFamily: 'MavenPro',
+              fontSize: 18,
+              
+            ),
+          ),
+        )
       ],
+  )
   );
 }
