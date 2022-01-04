@@ -12,10 +12,8 @@ class DetailScreen extends StatelessWidget {
     double fullHeightScreen = MediaQuery.of(context).size.height;
 
     return Scaffold(
-        // appBar: AppBar(
-        //   title: Text('Details [ ' + leader.leaderFname + ' ]'),
-        // ),
-        body: CustomScrollView(
+
+      body: CustomScrollView(
       slivers: [
         SliverAppBar(
           expandedHeight: fullHeightScreen * 0.4,
@@ -37,45 +35,54 @@ class DetailScreen extends StatelessWidget {
         SliverList(
           delegate: SliverChildListDelegate([
             Container(
-                child: Column(
-              children: [
-                Container(
-                  // height: fullHeightScreen,
-                  width: fullWidthScreen,
-                  padding: EdgeInsets.symmetric(vertical: 10.0,horizontal: 20.0),
-                  child: Row(
-                    children: [
-                      Expanded(
-                        flex: 1,
-                        child: Text("Nom de famille :", style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),)
-                      ),
-                      Expanded(
-                        flex: 2,
-                        child: Text(leader.leaderLname, style: TextStyle(fontFamily: 'Montserrat',
-                        fontWeight: FontWeight.w500),)
-                      ),
-                      
-                    ],
-                  ),
-                )
-              ],
+              width: fullWidthScreen,
+              padding: EdgeInsets.symmetric(vertical: 10.0,horizontal: 20.0),
+              child: Column(
+                children: [
+                  showRowElement(Icons.person_outline_rounded, "Nom de famille", leader.leaderLname),
+                  showRowElement(Icons.person_outline_rounded, "Prénom", leader.leaderFname),
+                  showRowElement(Icons.date_range,"Date de Naissance", leader.leaderBornDate),
+                  showRowElement(Icons.home_outlined,"Lieu de Naissance", leader.leaderBornFrom),
+                  showRowElement(Icons.flag_outlined,"Nationalité", leader.leaderCountry),
+                  showRowElementWithoutIcon( "Profession", leader.leaderRole),
+                ],
             )),
           ]),
         )
       ],
     ));
-
-    // Padding(
-    //   padding: const EdgeInsets.all(16.0),
-    //   child: Column(
-    //     children: [
-    //       Text(leader.leaderLname),
-    //       Text(leader.leaderFname),
-    //       Text(leader.leaderMessage),
-    //     ],
-    //   ),
-    // ),
   }
+}
+
+
+showRowElement(nameIcon, nameLabel, valueLeader) {
+  return Row(
+      children: [
+        Container(
+          child: Row(
+            children: [
+              Icon(nameIcon),
+              Text("$nameLabel : ")
+            ],
+          ),
+        ),
+        Text(valueLeader)
+      ],
+  );
+}
+
+
+showRowElementWithoutIcon( nameLabel, valueLeader) {
+  return Row(
+      children: [
+        Container(
+          child: Row(
+            children: [
+              Text("$nameLabel : ")
+            ],
+          ),
+        ),
+        Text(valueLeader)
+      ],
+  );
 }
