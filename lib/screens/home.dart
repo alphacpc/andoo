@@ -1,5 +1,6 @@
 import 'package:andoo/screens/details.dart';
 import 'package:andoo/models/LeaderType.dart';
+import 'package:andoo/screens/proverb.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 
@@ -33,17 +34,17 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ) ,
                   )),
-              listTitleDrawer(Icons.gamepad_outlined, "Jeux", context),
-              listTitleDrawer(Icons.group, "Contes", context),
-              listTitleDrawer(Icons.reduce_capacity_rounded, "Proverbes", context),
-              listTitleDrawer(Icons.repeat_rounded, "Découvertes", context),
-              listTitleDrawer(Icons.language_rounded, "Ethnies & Langue", context),
+              listTitleDrawer(Icons.gamepad_outlined, "Jeux", context, ProverbScreen),
+              listTitleDrawer(Icons.group, "Contes", context, ProverbScreen),
+              listTitleDrawer(Icons.reduce_capacity_rounded, "Proverbes", context, ProverbScreen),
+              listTitleDrawer(Icons.repeat_rounded, "Découvertes", context, ProverbScreen),
+              listTitleDrawer(Icons.language_rounded, "Ethnies & Langue", context, ProverbScreen),
 
               SizedBox(height: 10,),
 
-              listTitleDrawer(Icons.info_outline, "A propos", context),
-              listTitleDrawer(Icons.login_outlined, "connexion", context),
-              listTitleDrawer(Icons.settings_applications_outlined, "Paramétre", context),
+              listTitleDrawer(Icons.info_outline, "A propos", context, ProverbScreen),
+              listTitleDrawer(Icons.login_outlined, "connexion", context, ProverbScreen),
+              listTitleDrawer(Icons.settings_applications_outlined, "Paramétre", context, ProverbScreen),
 
             ],
           ),
@@ -172,7 +173,7 @@ void doNothing(BuildContext context) {
 }
 
 
-Widget listTitleDrawer(iconName, String textTitle ,context){
+Widget listTitleDrawer(iconName, String textTitle ,context, screenName){
   return ListTile(
       title: Container(
           child: Row(
@@ -188,6 +189,8 @@ Widget listTitleDrawer(iconName, String textTitle ,context){
             ],
           ),
       ),
-      onTap: () => Navigator.pop(context),
+      onTap: () => Navigator.push(context, MaterialPageRoute(
+        builder: (context) =>  screenName()
+      )),
     );
 }
