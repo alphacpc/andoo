@@ -3,10 +3,6 @@ import 'package:andoo/models/LeaderType.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 
-// import 'package:getwidget/components/avatar/gf_avatar.dart';
-// import 'package:getwidget/components/list_tile/gf_list_tile.dart';
-// import 'package:getwidget/shape/gf_avatar_shape.dart';
-
 class HomeScreen extends StatelessWidget {
   HomeScreen({Key? key, required this.leaders}) : super(key: key);
 
@@ -19,36 +15,36 @@ class HomeScreen extends StatelessWidget {
 
     return Scaffold(
       drawer: Container(
-        width: fullWidthScreen / 2,
+        width: fullWidthScreen / 1.7,
         child: Drawer(
           child: ListView(
-            padding: EdgeInsets.zero,
+            // padding: EdgeInsets.zero,
             children: [
               const DrawerHeader(
                   decoration: BoxDecoration(color: Colors.deepOrange),
                   child: Center(
-                    child: Text('Bienvenue sur andoo'),
+                    child: Text('andoo', style: 
+                      TextStyle(
+                        color: Colors.white,
+                        fontSize: 44,
+                        fontWeight: FontWeight.bold,
+                        letterSpacing: 1,
+                        fontFamily: 'MavenPro'
+                      ),
+                    ) ,
                   )),
-              ListTile(
-                title: Container(
-                  child: Row(
-                    children: [
-                      Icon(Icons.person_pin),
-                      SizedBox(width: 20,),
-                      Text("Connexion")
-                    ],
-                  ),
-                ),
-                onTap: () => Navigator.pop(context),
-              ),
-              ListTile(
-                title: const Text('Pays'),
-                onTap: () => Navigator.pop(context),
-              ),
-              ListTile(
-                title: const Text('Parametres'),
-                onTap: () => Navigator.pop(context),
-              ),
+              listTitleDrawer(Icons.gamepad_outlined, "Jeux", context),
+              listTitleDrawer(Icons.group, "Contes", context),
+              listTitleDrawer(Icons.reduce_capacity_rounded, "Proverbes", context),
+              listTitleDrawer(Icons.repeat_rounded, "Découvertes", context),
+              listTitleDrawer(Icons.language_rounded, "Ethnies & Langue", context),
+
+              SizedBox(height: 10,),
+
+              listTitleDrawer(Icons.info_outline, "A propos", context),
+              listTitleDrawer(Icons.login_outlined, "connexion", context),
+              listTitleDrawer(Icons.settings_applications_outlined, "Paramétre", context),
+
             ],
           ),
         ),
@@ -173,4 +169,25 @@ class HomeScreen extends StatelessWidget {
 
 void doNothing(BuildContext context) {
   print('I want to delete');
+}
+
+
+Widget listTitleDrawer(iconName, String textTitle ,context){
+  return ListTile(
+      title: Container(
+          child: Row(
+            children: [
+              Icon(iconName, color: Colors.deepOrange,),
+              SizedBox(width: 20,),
+              Text(textTitle, style: 
+                TextStyle(
+                  fontSize: 14,
+                  letterSpacing: 1,
+                  fontFamily: 'Montserrat',
+              ), )
+            ],
+          ),
+      ),
+      onTap: () => Navigator.pop(context),
+    );
 }
