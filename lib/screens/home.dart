@@ -1,8 +1,16 @@
-import 'package:andoo/screens/details.dart';
-import 'package:andoo/models/LeaderType.dart';
-import 'package:andoo/screens/proverb.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
+import 'package:andoo/models/LeaderType.dart';
+//Import Screens
+import 'package:andoo/screens/about.dart';
+import 'package:andoo/screens/culture.dart';
+import 'package:andoo/screens/auth/login.dart';
+import 'package:andoo/screens/contes.dart';
+import 'package:andoo/screens/details.dart';
+import 'package:andoo/screens/discover.dart';
+import 'package:andoo/screens/games.dart';
+import 'package:andoo/screens/proverb.dart';
+import 'package:andoo/screens/setting.dart';
 
 class HomeScreen extends StatelessWidget {
   HomeScreen({Key? key, required this.leaders}) : super(key: key);
@@ -34,17 +42,17 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ) ,
                   )),
-              listTitleDrawer(Icons.gamepad_outlined, "Jeux", context, ProverbScreen),
-              listTitleDrawer(Icons.group, "Contes", context, ProverbScreen),
-              listTitleDrawer(Icons.reduce_capacity_rounded, "Proverbes", context, ProverbScreen),
-              listTitleDrawer(Icons.repeat_rounded, "Découvertes", context, ProverbScreen),
-              listTitleDrawer(Icons.language_rounded, "Ethnies & Langue", context, ProverbScreen),
+              listTitleDrawer(Icons.gamepad_outlined, "Jeux", context, "gameScreen"),
+              listTitleDrawer(Icons.group, "Contes", context, "conteScreen"),
+              listTitleDrawer(Icons.reduce_capacity_rounded, "Proverbes", context, "proverbScreen"),
+              listTitleDrawer(Icons.repeat_rounded, "Découvertes", context, "discoverScreen"),
+              listTitleDrawer(Icons.language_rounded, "Ethnies & Langue", context, "cultureScreen"),
 
               SizedBox(height: 10,),
 
-              listTitleDrawer(Icons.info_outline, "A propos", context, ProverbScreen),
-              listTitleDrawer(Icons.login_outlined, "connexion", context, ProverbScreen),
-              listTitleDrawer(Icons.settings_applications_outlined, "Paramétre", context, ProverbScreen),
+              listTitleDrawer(Icons.info_outline, "A propos", context, "aboutScreen"),
+              listTitleDrawer(Icons.login_outlined, "connexion", context, "loginScreen"),
+              listTitleDrawer(Icons.settings_applications_outlined, "Paramétre", context, "settingScreen"),
 
             ],
           ),
@@ -174,6 +182,39 @@ void doNothing(BuildContext context) {
 
 
 Widget listTitleDrawer(iconName, String textTitle ,context, screenName){
+  
+  dynamic buildPageContext;
+
+  switch (screenName) {
+    case 'gameScreen':
+      buildPageContext = (context) => GameScreen();
+      break;
+    case 'conteScreen':
+      buildPageContext = (context) => ConteScreen();
+      break;
+    case 'proverbScreen':
+      buildPageContext = (context) => ProverbScreen();
+      break;
+    case 'discoverScreen':
+      buildPageContext = (context) => DiscoverScreen();
+      break;
+    case 'cultureScreen':
+      buildPageContext = (context) => CultureScreen();
+      break;
+    case 'aboutScreen':
+      buildPageContext = (context) => AboutScreen();
+      break;
+    case 'loginScreen':
+      buildPageContext = (context) => LoginScreen();
+      break;
+    case 'settingScreen':
+      buildPageContext = (context) => SettingScreen();
+      break;
+
+
+    default:
+  }
+
   return ListTile(
       title: Container(
           child: Row(
@@ -190,7 +231,7 @@ Widget listTitleDrawer(iconName, String textTitle ,context, screenName){
           ),
       ),
       onTap: () => Navigator.push(context, MaterialPageRoute(
-        builder: (context) =>  screenName()
+        builder: buildPageContext
       )),
     );
 }

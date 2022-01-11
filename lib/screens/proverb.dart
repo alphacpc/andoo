@@ -5,8 +5,8 @@ class ProverbScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double fullWidthScreen = MediaQuery.of(context).size.width;
-    double fullHeightScreen = MediaQuery.of(context).size.height;
+    // double fullWidthScreen = MediaQuery.of(context).size.width;
+    // double fullHeightScreen = MediaQuery.of(context).size.height;
 
     return Scaffold(
       body: Container(
